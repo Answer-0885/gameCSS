@@ -35,7 +35,7 @@ html:hover .block-2, html:hover::before {
 }
 
 html::after {
-  content: 'Задача двигать курсор мышки и не задеть движущиеся объекты.';
+  content: 'Двигайте мышкой, чтобы не задеть движущиеся объекты.';
   font: bold 2vh/1 sans-serif;
   text-indent: 0;
   top: 2vh;
@@ -65,7 +65,7 @@ html::after {
   top: 0;
   left: 0;
   transform: scale(2, 0.5);
-  animation: fly1 2s infinite;
+  animation: fly1 6s infinite;
 }
 @keyframes fly1 {
   20% {
@@ -86,7 +86,7 @@ html::after {
   bottom: 0;
   left: 0;
   transform: rotate(0.5turn);
-  animation: fly2 2s infinite;
+  animation: fly2 6s infinite;
 }
 @keyframes fly2 {
   20% {
@@ -104,12 +104,12 @@ html::after {
 }
 .block-2::before {
   background: blue;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   bottom: 0;
   right: 0;
   transform: skew(30deg, 20deg);
-  animation: fly3 5s infinite;
-  transition: all 1s 9999s;
+  animation: fly3 6s infinite;
+  transition: all 10s 9999s;
 }
 @keyframes fly3 {
   20% {
@@ -132,7 +132,7 @@ html::after {
   top: 0;
   right: 0;
   transform: scale3d(2.5, 1.2, 0.3);
-  animation: fly4 4s infinite;
+  animation: fly4 6s infinite;
   transition: all 1s 9999s;
 }
 @keyframes fly4 {
@@ -155,7 +155,7 @@ html::before, .block-2::after {
 }
 
 .block-1:hover + .block-2, .block-2:hover {
-          animation-play-state: paused !important;
+  animation-play-state: paused !important;
   transition: 0s;
 }
 
@@ -168,7 +168,7 @@ html::before, .block-2::after {
   height: 200vmax;
   margin: -50vmax;
   z-index: 5;
-  transition: background .4s;
+  transition: background 1s;
 }
 
 .block-1:hover + .block-2::after, .block-2:hover::after {
@@ -176,9 +176,9 @@ html::before, .block-2::after {
   left: 50vw;
   width: 5ch;
   color: red;
-          animation: none;
+  animation: none;
   background: transparent;
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 6;
   transition: color .4s;
 }
